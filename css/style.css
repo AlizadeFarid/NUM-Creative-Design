@@ -1,0 +1,969 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Helvetica, sans-serif;
+}
+/*-----------------------Header start-----------------------*/
+#header{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 110px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -12px 12px 20px rgba(200,200,200,.3);
+}
+.navbar .fa-bars{
+    margin-left: 20px;
+    font-size: 30px;
+    padding: 18px 22px;
+    border-radius: 50%;
+    background: #f0f6ff;
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .logo img{
+    width: 123px;
+}
+
+.navbar .menu ul li{
+    float: left;
+    margin-left: 40px;
+}
+.navbar .menu ul li a{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 110px;
+    font-weight: 600;
+    color: #1a1b1e;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.navbar .menu a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 5px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: #00c3ff;
+    border-radius: 5px;
+    transition: 0.4s linear;
+}
+.navbar .menu a:hover::after{
+    width: 80px;
+}
+.navbar .menu .active::after{
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 5px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: #00c3ff;
+    border-radius: 5px;
+}
+.navbar .menu ul li i,.navbar .buttons ul li i{
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+.navbar .buttons ul li{
+    line-height: 110px;
+    float: left;
+}
+.navbar .buttons .icon{
+    position: relative;
+    border-radius: 50%;
+    padding: 17px;
+    text-align: center;
+    background: #f0f6ff;
+    margin-left: 10px;
+}
+.navbar .buttons .icon i{
+    color: #1a1b1e;
+    margin: 0;
+}
+.navbar .buttons .icon1::after{
+    content: '0';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -7px;
+    top: -7px;
+    background: #00c3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+}
+.navbar .buttons button{
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 30px;
+    padding: 17px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #0160e7;
+    color: #fff;
+    box-shadow: 12px 12px 20px 0 rgba(1,96,231,.3);
+    overflow: hidden;
+    cursor: pointer;
+}
+.navbar .buttons button::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.6);
+    transition: 0.3s linear;
+}
+.navbar .buttons button:hover::before{
+    background: transparent;
+    width: 100%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown ul{
+    position: absolute;
+    width: 300%;
+    left: -50%;
+    box-shadow: 12px 12px 12px 8px rgba(220,220,220,.6);
+    border-radius: 15px;
+    background-color: #fff;
+    margin-top: 20px;
+    visibility: hidden;
+    transition: .5s;
+    opacity: 0;
+} 
+
+.dropdown ul li a{
+    line-height: 45px !important;
+    margin: 0 !important;
+}
+
+.dropdown:hover ul{
+    opacity: 1;
+    margin-top: 5px;
+    visibility: visible;
+}
+
+/*-----------------------Navbar end-----------------------*/
+.header-inner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-inner .left-side{
+    width: 50%;
+    padding-top: 80px;
+}
+.header-inner .left-side img{
+    width: 140%;
+    margin-left: -220px;
+}
+.header-inner .right-side{
+    width: 50%;
+    height: 100vh;
+    padding: 150px 20px 150px 100px;
+}
+.header-inner .right-side h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #a5b7d2;
+    margin-bottom: 15px;
+}
+.header-inner .right-side h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+}
+.header-inner .right-side p{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    line-height: 35px;
+    color: #606060;
+    margin-bottom: 35px;
+}
+.header-inner .right-side button{
+    position: relative;
+    padding: 5px 8px;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #fe4c1c;
+    color: #fff;
+    cursor: pointer;
+}
+.header-inner .right-side button::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.6);
+    transition: 0.3s linear;
+}
+.header-inner .right-side button:hover::before{
+    background: transparent;
+    width: 100%;
+}
+
+.header-inner .right-side button i{
+    display: inline-block;
+    color: #fe4c1c;
+    margin-left: 20px;
+    font-size: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+/*-----------------------Header end-----------------------*/
+
+
+/*-----------------------Card section start-----------------------*/
+#cards{
+    width: 100%;
+    padding: 100px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#cards .card{
+    position: relative;
+    width: 23%;
+    padding: 35px 35px 50px 35px;
+    border-radius: 15px;
+    box-shadow: 12px 12px 12px 10px rgba(200,200,200,.4);
+    transition: 0.2s linear;
+}
+#cards .card:hover{
+    transform: translateY(-15px);
+    background: linear-gradient(145deg,#0039e4,#04dbf1);
+}
+#cards .card:hover i{
+    color: #0160e7;
+    background: #fff;
+}
+#cards .card:hover h4,#cards .card:hover p{
+    color: #fff;
+}
+#cards .card i{
+    padding: 18px;
+    background: linear-gradient(145deg,#0039e4,#04dbf1);
+    font-size: 25px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    color: #fff;
+}
+#cards .card h4{
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+#cards .card p{
+    font-size: 16px;
+    line-height: 35px;
+    color: #606060;
+} 
+#cards .card span{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    color: #edf1f6;
+    font-size: 60px;
+    font-weight: 900;
+}
+/*-----------------------Card section end-----------------------*/
+
+/*-----------------------About section start-----------------------*/
+#about{
+    width: 100%;
+    padding: 80px 0 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#about .left-side{
+    width: 50%;
+    padding-left: 90px;
+}
+#about .left-side h5{
+    font-size: 14px;
+    font-weight: 600;
+    color: #a5b7d2;
+    margin-bottom: 20px;
+}
+#about .left-side h2{
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+#about .left-side h6{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    line-height: 35px;
+}
+#about .left-side p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #606060;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+#about .left-side button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transition: 0.3s linear;
+}
+#about .left-side button img{
+    margin-left: -20px;
+}
+#about .left-side button:hover{
+    transform: translateY(-10px);
+}
+#about .right-side{
+    width: 50%;
+}
+#about .right-side img{
+    width: 100%;
+}
+.row{
+    width: 100%;
+}
+/*-----------------------About section end-----------------------*/
+
+/*-----------------------Servies section start-----------------------*/
+#services{
+    width: 100%;
+}
+#services .row{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+#services .row h3{
+    font-size: 15px;
+    font-weight: 700;
+    color: #606060;
+    margin-bottom: 10px;
+} 
+#services .row h2{
+    font-size: 33px;
+    font-weight: 900;
+} 
+.cards{
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#services .cards .card{
+    padding: 50px 30px 30px;
+    border-radius: 15px;
+    width: 30%;
+    height: 430px;
+    text-align: center;
+}    
+.cards .card:hover{
+    transition: 0.4s linear;
+    box-shadow: 1px 2px 26px 13px #949494;
+}  
+.cards .card h3{
+   font-size: 23px;
+   font-weight: 600;
+   margin: 20px 0;
+}
+.cards .card p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.cards .card button{
+    position: relative;
+    margin-top: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #fe4c1c;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s linear;
+    overflow: hidden;
+}
+.cards .card button::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.6);
+    transition: 0.3s linear;
+}
+.cards .card button:hover::before{
+    background: transparent;
+    width: 100%;
+}
+.cards .card:hover button{
+    margin-top: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+/*-----------------------Servies section end-----------------------*/
+
+/*-----------------------Benefits section start-----------------------*/
+#benefit{
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#benefit .left-side{
+    width: 50%;
+}
+#benefit .left-side img{
+    width: 110%;
+    margin-left: -240px;
+}
+#benefit .right-side{
+    width: 50%;
+    padding: 0 50px;
+}
+#benefit .right-side h3{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #606060;
+}
+#benefit .right-side h2{
+    margin-left: 10px;
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 900;
+}
+#benefit .row{
+    width: 100%;
+    margin: 5px 0;
+}
+#benefit .col-12{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#benefit .col-12 .col-6{
+    padding: 10px;
+    width: 50%;
+}
+#benefit .col-12 .col-6 span{
+    font-size: 20px;
+    font-weight: 900;
+    color: #00C3FF;
+}
+#benefit .col-12 .col-6 h4{
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#benefit .col-12 .col-6 p{
+    font-size: 16px;
+    line-height: 30px;
+    color: #606060;
+    margin-bottom: 10px;
+}
+/*-----------------------Benefits section end-----------------------*/
+
+/*-----------------------Pricing section start-----------------------*/
+#pricing{
+    width: 100%;
+    padding: 70px 0;
+}
+#pricing .cards{
+    width: 100%;
+    padding: 0 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#pricing .cards .card{
+    position: relative;
+    padding: 50px 30px 30px;
+    border-radius: 15px;
+    width: 31%;
+    height: 630px;
+    text-align: center;
+    transition: 0.2s linear;
+    box-shadow: 1px 2px 26px 13px #949494;
+} 
+#pricing .cards .card:hover{
+   transform: translateY(-15px);
+} 
+#pricing .cards .card span{
+    position: absolute;
+    padding: 8px 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    background:#00c3ff;
+    color: #fff;
+    top: 20px;
+    left: 0;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 14px -3px #000000;
+}
+#pricing .cards .card-2 span{
+    background:#fff;
+    color: #fe4c1c;
+}
+
+#pricing .cards .card-3 span{
+    background:#0160e7;
+}
+#pricing .cards .card h2{
+   font-size: 45px;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+#pricing .cards .card h5{
+    font-size: 17px;
+    font-weight: 600;
+    color: #606060;
+    margin-bottom: 35px;
+}
+#pricing .cards .card ul {
+    margin-top: 40px;
+}
+#pricing .cards .card ul li{
+    margin: 28px 0;
+    color: #606060;
+}
+#pricing .cards .card button{
+    position: relative;
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #fe4c1c;
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+#pricing .cards .card-1 button{
+    background:#00c3ff;
+}
+#pricing .cards .card-2{
+    background:#fe4c1c;
+    color: #fff;
+}
+#pricing .cards .card-2 ul li{
+    color: #fff;
+}
+#pricing .cards .card-2 h5{
+    color: #fff;
+}
+#pricing .cards .card-2 button{
+    background:#fff;
+    color: #fe4c1c;
+}
+#pricing .cards .card-3 button{
+    background: #0160e7;
+}
+/*-----------------------Pricing section end-----------------------*/
+
+/*-----------------------Testimonials section start-----------------------*/
+#testimonial{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+#testimonial .left-side{
+    width: 50%;
+    padding: 70px;
+}
+#testimonial .left-side h3{
+    font-size: 17px;
+    font-weight: 600;
+    color: #606060;
+}
+#testimonial .left-side h2{
+    padding-bottom: 20px;
+    font-size: 34px;
+    font-weight: 900;
+}
+#testimonial .left-side p{
+    padding-bottom: 30px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #606060;
+}
+#testimonial .left-side img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 25px;
+}
+#testimonial .left-side h5{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+#testimonial .left-side h6{
+    font-size: 16px;
+    font-weight: 500;
+    color: #606060;
+    margin-top: 10px;
+}
+#testimonial .right-side{
+    width: 50%;
+    overflow: hidden;
+}
+#testimonial .right-side img{
+    padding-left: 130px;
+}
+/*-----------------------Testimonials section end-----------------------*/
+
+/*-----------------------Blog section start-----------------------*/
+#blog{
+    width: 100%;
+    padding: 130px 0;
+}
+#blog .row{
+    width: 100%;
+    text-align: center;
+}
+#blog .row h3{
+    font-size: 17px;
+    font-weight: 600;
+    color: #606060;
+}
+#blog .row h2{
+    padding-bottom: 20px;
+    font-size: 34px;
+    font-weight: 900;
+}
+#blog .row p{
+    padding-bottom: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #606060;
+}
+#blog .cards{
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#blog .card{
+    border-radius: 15px;
+    width: 32%;
+    text-align: center;
+    box-shadow: -1px -1px 16px 1px #707070;
+    overflow: hidden;
+}
+#blog .card .card-header{
+    position: relative;
+}
+#blog .card .card-header img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#blog .card .card-header a:nth-child(1){
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    padding-left: 30px;
+    padding: 10px;
+    background: #fe4c1c;
+}
+#blog .card .card-body{
+    padding: 20px 30px;
+    text-align: left;
+}
+#blog .card .card-body a{
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #606060;
+    transition: 0.3s linear;
+}
+#blog .card .card-body a:hover{
+    color: #000;
+}
+#blog .card .card-body i{
+    transition: 0.3s linear;
+}
+#blog .card .card-body a:hover i{
+    color: #fe4c1c;
+}
+#blog .card .card-body h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+#blog .card .card-body h2:hover{
+    color: #fe4c1c;
+}
+#blog .card .card-body p{
+    font-size: 17px;
+    font-weight: 500;
+    color: #606060;
+}
+/*-----------------------Blog section end-----------------------*/
+
+/*-----------------------Footer start-----------------------*/
+footer{
+    width: 100%;
+    background: linear-gradient(185deg,#0039e4,#044ff1);
+}
+footer .contacts{
+    width: 100%;
+    padding: 150px 0 150px 70px;
+    display: flex;
+    border-bottom: 1px solid #fff;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #fff;
+}
+footer .contacts .col-3{
+    width: 24%;
+    padding: 0 10px;
+}
+footer .contacts .icons img{
+    margin-bottom: 20px;
+}
+footer .contacts .icons p{
+    font-weight: 500;
+    color: #fff;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+footer .contacts .icons ul li{
+    float: left;
+}
+footer .contacts .icons ul li a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    background: #fff;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+footer .contacts .icons ul li a:hover{
+    transform: translateY(-5px);
+}
+footer .contacts h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+footer .contacts .contact ul li{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+footer .contacts .service ul li a{
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+footer .contacts .service ul li a:hover{
+    text-decoration: underline;
+}
+footer .contacts .gallery img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 10px;
+}
+footer .row{
+    padding: 30px 0;
+    text-align: center;
+}
+footer .row p{
+    font-size: 16px;
+    color: #fff;
+}
+
+@media (max-width: 1100px){
+    .navbar .menu ul{
+        display: none;
+    }
+    .navbar .fa-bars{
+        display: block;
+    }
+    .navbar .buttons button{
+        display: none;
+    }
+    .navbar .buttons{
+        margin-left: 250px;;
+    }
+}
+@media (max-width: 992px){
+    .header-inner{
+        flex-direction: column;
+    }
+    .header-inner .left-side{
+        text-align: center;
+        width: 100%;
+    }
+    .header-inner .left-side img{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .header-inner .right-side{
+        text-align: center;
+        width: 100%;
+    }
+    #cards .card{
+       width: 48%;
+    }
+    #about .left-side{
+        width: 100%;
+        padding: 0 60px;
+    }
+    #about .right-side{
+        width: 100%;
+        padding: 0 60px;
+    }
+    #services .cards .card{
+        width: 50%;
+    }
+    #benefit .left-side{
+        width: 100%;
+        text-align: center;
+        padding: 0 100px;
+    }
+    #benefit .left-side img{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #benefit .right-side{
+        width: 100%;
+    }
+    #pricing .cards{
+        flex-direction: column;
+     } 
+    #pricing .cards .card{
+       width: 45%;
+       margin-bottom: 40px;
+    }
+    #testimonial .left-side{
+       width: 100%;
+    }
+    #testimonial .right-side{
+        width: 100%;
+    }
+     #testimonial .right-side img{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #blog .card{
+        width: 45%;
+        margin-bottom: 40px;
+    }
+    footer .contacts .col-3{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 768px){
+    #cards .card{
+       width: 100%;
+       margin-bottom: 30px;
+    }
+    #services .cards .card{
+        width: 100%;
+    }
+    #benefit .col-12 .col-6{
+        width: 100%;
+    }
+    #pricing .cards .card{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    #blog .cards{
+        padding: 0 30px;
+    }
+    #blog .card{
+        width: 100%;
+    }
+    footer .contacts .col-3{
+        width: 100%;
+    }
+    footer .contacts .gallery img{
+        width: 230px;
+        height: 230px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+}
